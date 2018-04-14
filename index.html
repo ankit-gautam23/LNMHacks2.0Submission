@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="aframe.min.js"></script>
+	<script type="text/javascript" src="aframe-animation-component.min.js"></script>
+	<title>Design ur VR</title>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+            <img id="wall1" src="Images/walls.jpg">
+            <img id="wall2" src="Images/wall1.jpg">
+            <img id="wall3" src="Images/wall2.png">
+            <img id="wall4" src="Images/wall3.jpg">
+            <img id="bwall1" src="Images/bwall.jpg">
+            <img id="bwall2" src="Images/bwall1.jpg">
+            <img id="bwall3" src="Images/bwall2.jpg">
+            <img id="floor1" src="Images/floor.jpg">
+            <img id="floor2" src="Images/floor1.jpg">
+            <img id="floor3" src="Images/floor2.jpg">
+            <img id="window1" src="Images/window.jpg">
+            <img id="window2" src="Images/window1.jpg">
+            <img id="window3" src="Images/window2.jpg">
+            <img id="door1" src="Images/door.jpg">
+            <img id="door2" src="Images/door1.jpg">
+            <img id="door3" src="Images/door2.jpg">
+            <img id="roof1" src="Images/roof.jpg">
+            <img id="roof2" src="Images/roof1.jpg">
+            <img id="bed1" src="Images/bed.jpg">
+            <img id="bed2" src="Images/bed1.jpg">
+            <img id="table1" src="Images/table.jpg">
+            <img id="table2" src="Images/table1.jpg">
+            <img id="tv" src="Images/tv.jpg">
+            <img id="clock" src="Images/clock1.jpg">
+            <img id="sky" src="Images/sky.jpg">
+            <img id="matw" src="Images/mat.jpg">
+            <img id="ground" src="Images/grass.png">
+            <img id="wlcm1" src="Images/elcm.jpg">
+            <img id="wlcm2" src="Images/wlcm.jpg">
+            <img id="sofa" src="Images/sofa.jpg">
+            <img id="sofa1" src="Images/sofa1.jpg">
+            
+            <img id="adds" src="Images/adds.png">
+            <img id="lets" src="Images/lets.jpg">
+            <img id="letsh" src="Images/letsh.png">
+            <img id="skyb" src="Images/skyb.jpg">
+            <img id="grndb" src="Images/grndb.png">
+            <img id="homeb" src="Images/homeb.jpg">
+            <img id="roofb" src="Images/roofb.jpg">
+            <img id="wallb" src="Images/wallb.png">
+            <img id="bwallb" src="Images/bwallb.png">
+            <img id="tvb" src="Images/TVb.png">
+            <img id="clockb" src="Images/clockb.png">
+            <img id="sofa" src="Images/sofab.png">
+            <img id="doorb" src="Images/doorb.png">
+            <img id="windb" src="Images/windb.png">
+            <img id="floorb" src="Images/floorb.png">
+            <img id="matb" src="Images/matb.png">
+            <img id="wlcmb" src="Images/wlcm.png">
+            <img id="insb" src="Images/inside.png">
+            <img id="remb" src="Images/Remove.png">
+            <audio id="audio" src="music.mp3"></audio>
+		</a-assets>
+
+        <a-box id="isofa" src="#sofa" visible="false" position="6 -3.5 -13" width="3" height="2" depth="10"></a-box>
+        
+        <a-box id="wall" visible="false" position="0 0 -5" width="16" height="10" depth="0.01" rotation="0 0 0" src="#wall1"></a-box>
+        <a-box id="bwall" visible="false" position="0 0 -21" width="16" height="10" depth="0.01" rotation="0 0 0" src="#bwall1"></a-box>
+        <a-box id="rwall" visible="false" position="8 0 -13" width="16" height="10" depth="0.01" rotation="0 90 0" src="#wall1"></a-box>
+        <a-box id="lwall" visible="false" position="-8 0 -13" width="16" height="10" depth="0.01" rotation="0 90 0" src="#wall1"></a-box>
+
+
+        <a-box id="roof" visible="false" position="0 5 -13" width="16.1" height="16.1" depth="0.5" rotation="90 0 0" src="#roof1"></a-box>
+        <a-box id="floor" visible="false" position="0 -5 -13" width="16" height="16" depth="0.01" rotation="90 0 0" src="#floor1"></a-box>
+
+        <a-box id="door" visible="false" position="0 -2 -5" width="4" height="6" depth="0.2"  src="#door1"></a-box>
+        <a-box id="windowa" visible="false" position="5 0 -5" width="2.5" height="3" depth="0.2" src="#window1"></a-box>
+        <a-box id="windowb" visible="false" position="-5 0 -5" width="2.5" height="3" depth="0.2" src="#window1"></a-box>
+        <a-box id="mate" visible="false" src="#matw" position=" 0 -5 -3.8" width="4" height="2" depth="0.1" rotation="270 0 0"></a-box>
+        
+        <a-box id="wlcm" src="#wlcm1" visible="false" position="0 3 -5" width="3" height="2" depth="0.2"></a-box>
+        <a-box id="itv" src="#tv" position="-7.8 0 -13" visible="false" width="5" height="3.5" depth="0.1" rotation="0 90 0"></a-box>
+        <a-box id="iclock" src="#clock" position="-7.8 2.5 -18" visible="false" width="1.5" height="1.5" depth="0.05" rotation="0 90 0"></a-box>
+        
+        <a-box id="itable" src="#table1" position="-7 -3.5 -13" width="2" visible="false" height="2.5" depth="5"></a-box>
+        
+        <a-box  id="grd" position="0 -6 0" width="150" height="150" src="#ground" visible="false" rotation="90 0 0"></a-box>       
+        
+        <a-sky id="s" visible="false" src="#sky"></a-sky>
+        
+        
+        <!--     buttons        -->
+        
+        <a-box id="playbtn" sound="src: #audio; loop:true" position="-4 3.2 -4.5" src="#lets" height="2" width="3.5" depth="0.01"></a-box>
+
+        <a-box id="skybtn" src="#skyb" position="-6 1.5 -4.5" height="1" width="1" depth="0.01"></a-box>
+        <a-box id="grndbtn" src="#grndb" position="-4.5 1.5 -4.5" height="1" width="1" depth="0.01"></a-box>
+        <a-box id="homebtn" src="#homeb" position="-3 1.5 -4.5" height="1" width="1" depth="0.01"></a-box>
+
+        <a-box id="insbtn" src="#insb" visible="false" position="0 1.5 -4.3" height="1" width="1.5" depth="0.01"></a-box>
+        
+        <a-box id="dbtna" src="#doorb" visible="false" position="5 1.5 -4.5" height="1" width="1.5" depth="0.01"></a-box>
+             <a-box id="dba" src="#door1" visible="false" position="6 0 -4.5" height="2" width="1.2" depth="0.01"></a-box>
+             <a-box id="dbb" src="#door2" visible="false" position="4.5 0 -4.5" height="2" width="1.2" depth="0.01"></a-box>
+             <a-box id="dbc" src="#door3" visible="false" position="3 0 -4.5" height="2" width="1.2" depth="0.01"></a-box>
+
+        
+        <a-box id="wbtna" src="#windb" visible="false" position="3 1.5 -4.5" height="1" width="1.5" depth="0.01"></a-box>
+             <a-box id="wba" src="#window1" visible="false" position="6 3 -4.5" height="2" width="1.2" depth="0.01"></a-box>
+             <a-box id="wbb" src="#window2" visible="false" position="4.5 3 -4.5" height="2" width="1.2" depth="0.01"></a-box>
+             <a-box id="wbc" src="#window3" visible="false" position="3 3 -4.5" height="2" width="1.2" depth="0.01"></a-box>
+
+        
+        <a-box id="backbtn" src="#backb" color="blue" visible="false" position="1.5 1.5 -4.5" height="2" width="2" depth="0.01"></a-box>
+        
+        <a-box id="matbtn" visible="false" src="#matb" position="-6 0.5 -4.5" height="1" width="1" depth="0.01"></a-box>
+        <a-box id="wlcbtn" visible="false" src="#wlcmb" position="-4.5 0.5 -4.5" height="1" width="1" depth="0.01"></a-box>
+        
+        <!--     Inside home designing buttons       -->
+        
+        <a-box id="removebtn" visible="false" src="#remb" position="0 1.5 -14.5" height="3" width="3" depth="0.01"></a-box>
+        
+        
+        <a-box id="stuff" src="#adds" visible="false" position="-4 3.2 -14.5" height="1.5" width="3.5" depth="0.01"></a-box>
+                <a-box id="wallba" visible="false" src="#wallb" position="-4 1.5 -14.5" height="1" width="1.5" depth="0.01"></a-box>
+                <a-box id="wlba" src="#wall1" visible="false" position="-5.5 0 -14.5" height="1" width="1" depth="0.01"></a-box>
+                <a-box id="wlbb" src="#wall3" visible="false" position="-4 0 -14.5" height="1" width="1" depth="0.01"></a-box>
+                <a-box id="wlbc" src="#wall4" visible="false" position="-2.5 0 -14.5" height="1" width="1" depth="0.01"></a-box>
+    
+        
+                <a-box id="floorba" visible="false" src="#floorb" position="4 1.5 -14.5" height="1" width="1.5" depth="0.01"></a-box>
+                <a-box id="flba" visible="false" src="#floor1" position="5.5 0 -14.5" height="1" width="1" depth="0.01"></a-box>
+                <a-box id="flbb" visible="false" src="#floor2" position="4 0 -14.5" height="1" width="1" depth="0.01"></a-box>
+                <a-box id="flbc" visible="false" src="#floor3" position="2.5 0 -14.5" height="1" width="1" depth="0.01"></a-box>
+    
+        <a-camera looks-control id="cam">
+            <a-cursor color="white"></a-cursor>
+        </a-camera>
+        
+	</a-scene>
+
+    <script>
+        var skya = document.getElementById('s');
+        var grounda = document.getElementById('grd');
+        var walla= document.getElementById('wall');
+        var lwalla=document.getElementById('lwall');
+        var rwalla=document.getElementById('rwall');
+        var bwalla = document.getElementById('bwall');
+        var doora = document.getElementById('door');
+        var windowa = document.getElementById('windowa');
+        var windowb = document.getElementById('windowb');
+        
+        var tablea= document.getElementById('itable');
+        var clocka= document.getElementById('iclock');
+        var tva= document.getElementById('itv');
+        var sofaa = document.getElementById('isofa');
+        
+        var mata = document.getElementById('mate');
+        var wlcma = document.getElementById('wlcm');
+        var roofa = document.getElementById('roof');
+        var floora = document.getElementById('floor');
+        var camera = document.getElementById('cam');
+        
+        
+        // front buttons
+        
+        var b1=document.getElementById('playbtn');
+        var b2 =document.getElementById('skybtn');
+        var b3 = document.getElementById('grndbtn');
+        var b4 = document.getElementById('homebtn');
+        var m1= document.getElementById('matbtn');
+        var w1 = document.getElementById('wlcbtn');
+        var dr1 = document.getElementById('dbtna');
+        var ww1= document.getElementById('wbtna');
+        var d1= document.getElementById('dba');
+        var d2= document.getElementById('dbb');
+        var d3= document.getElementById('dbc');
+        
+        var st= document.getElementById('stuff');
+        var bck = document.getElementById('backbtn');
+        var ins= document.getElementById('insbtn');
+        
+        var walb1= document.getElementById('wallba');
+        var wlb1=document.getElementById('wlba');
+        var wlb2=document.getElementById('wlbb');
+        var wlb3=document.getElementById('wlbc');
+        
+        var floorb1 = document.getElementById('floorba');
+        var flb1=document.getElementById('flba');
+        var flb2=document.getElementById('flbb');
+        var flb3=document.getElementById('flbc');
+        
+        var remall = document.getElementById('removebtn');
+        
+        
+        remall.addEventListener("click",function(){
+            b1.setAttribute("visible","false");
+            b2.setAttribute("visible","false");
+            b3.setAttribute("visible","false");
+            b4.setAttribute("visible","false");
+            m1.setAttribute("visible","false");
+            w1.setAttribute("visible","false");
+            dr1.setAttribute("visible","false");
+            ww1.setAttribute("visible","false");
+            d1.setAttribute("visible","false");
+            d2.setAttribute("visible","false");
+            d3.setAttribute("visible","false");
+            st.setAttribute("visible","false");
+            bck.setAttribute("visible","false");
+            ins.setAttribute("visible","false");
+            walb1.setAttribute("visible","false");
+            wlb1.setAttribute("visible","false");
+            wlb2.setAttribute("visible","false");
+            wlb3.setAttribute("visible","false");
+            floorb1.setAttribute("visible","false");
+            flb1.setAttribute("visible","false");
+            flb2.setAttribute("visible","false");
+            flb3.setAttribute("visible","false");
+            remall.setAttribute("visible","false");
+            
+        })
+        
+        /*
+        Inside home button coding
+        */
+            
+        st.addEventListener("click",function(){
+            clocka.setAttribute("visible","true");
+            tablea.setAttribute("visible","true");
+            tva.setAttribute("visible","true");
+            sofaa.setAttribute("visible","true");
+            st.setAttribute("visible","false");
+        })
+        
+        walb1.addEventListener("click",function(){
+            wlb1.setAttribute("visible","true");
+            wlb2.setAttribute("visible","true");
+            wlb3.setAttribute("visible","true");
+        })
+        
+        wlb1.addEventListener("click",function(){
+            walla.setAttribute("src","#wall1");
+            lwalla.setAttribute("src","#wall1");
+            rwalla.setAttribute("src","#wall1");
+            wlb1.setAttribute("visible","false");
+        })
+        
+        wlb2.addEventListener("click",function(){
+            walla.setAttribute("src","#wall3");
+            lwalla.setAttribute("src","#wall3");
+            rwalla.setAttribute("src","#wall3");
+            wlb2.setAttribute("visible","false");
+        })
+        
+        wlb3.addEventListener("click",function(){
+            walla.setAttribute("src","#wall4");
+            lwalla.setAttribute("src","#wall4");
+            rwalla.setAttribute("src","#wall4");
+            wlb3.setAttribute("visible","false");
+        })
+        
+        floorb1.addEventListener("click",function(){
+            flb1.setAttribute("visible","true");
+            flb2.setAttribute("visible","true");
+            flb3.setAttribute("visible","true");
+        })
+        
+        flb1.addEventListener("click",function(){
+            floora.setAttribute("src","#floor1");
+            flb1.setAttribute("visible","false");
+        })
+        
+        
+        flb2.addEventListener("click",function(){
+            floora.setAttribute("src","#floor2");
+            flb2.setAttribute("visible","false");
+        })
+        
+        
+        flb3.addEventListener("click",function(){
+            floora.setAttribute("src","#floor3");
+            flb3.setAttribute("visible","false");
+        })
+        
+        
+        /*
+        Outside home button coding
+        */
+        
+        b1.addEventListener("click", function(){
+            audio.setAttribute("autoplay","on");
+        })
+        
+        b2.addEventListener("click", function(){
+            skya.setAttribute("visible","true")
+        })
+        b3.addEventListener("click", function(){
+            grounda.setAttribute("visible","true")
+        })
+        b4.addEventListener("click", function(){
+            wall.setAttribute("visible","true")
+            bwall.setAttribute("visible","true")
+            lwall.setAttribute("visible","true")
+            rwall.setAttribute("visible","true")
+            roofa.setAttribute("visible","true")
+            floora.setAttribute("visible","true")
+            b1.setAttribute("visible","false")
+            b2.setAttribute("visible","false")
+            b3.setAttribute("visible","false")
+            b4.setAttribute("visible","false")
+            dr1.setAttribute("visible","true")
+            ww1.setAttribute("visible","true")
+            m1.setAttribute("visible","true")
+            w1.setAttribute("visible","true")   
+            ins.setAttribute("visible","true")
+        })
+        
+        ins.addEventListener("click",function(){
+            camera.setAttribute("position","0 1.5 -8");
+            st.setAttribute("visible","true");
+            walb1.setAttribute("visible","true");
+            floorb1.setAttribute("visible","true");
+            remall.setAttribute("visible","true");
+        })
+        
+         b2.addEventListener("mouseenter", function(){
+            b2.setAttribute("src","#letsh")
+        })
+         b2.addEventListener("mouseleave", function(){
+            b2.setAttribute("src","#skyb")
+        })
+          b3.addEventListener("mouseleave", function(){
+               b3.setAttribute("src","#grndb");
+           })
+         b3.addEventListener("mouseenter", function(){
+               b3.setAttribute("src","#letsh");
+           })
+        b4.addEventListener("mouseenter", function(){
+            b4.setAttribute("src","#letsh");
+        })
+        b4.addEventListener("mouseleave", function(){
+            b4.setAttribute("src","#homeb");
+        })
+        
+        
+        m1.addEventListener("mouseenter", function(){
+            m1.setAttribute("src","#letsh");
+        })
+        m1.addEventListener("mouseleave", function(){
+            m1.setAttribute("src","#matb");
+        })
+        m1.addEventListener("click", function(){
+            mata.setAttribute("visible","true");
+            m1.setAttribute("visible","false");
+        })
+        
+        
+        w1.addEventListener("mouseenter", function(){
+            w1.setAttribute("src","#letsh");
+        })
+        w1.addEventListener("mouseleave", function(){
+            w1.setAttribute("src","#wlcmb");
+        })
+         w1.addEventListener("click", function(){
+            wlcma.setAttribute("visible","true");
+             w1.setAttribute("visible","false");
+        })
+        
+          dr1.addEventListener("mouseenter", function(){
+            dr1.setAttribute("src","#letsh");
+           
+        })
+        dr1.addEventListener("mouseleave", function(){
+            dr1.setAttribute("src","#doorb");
+        })
+          
+        
+        
+        dr1.addEventListener("click", function(){
+            doora.setAttribute("visible","true");
+             d1.setAttribute("visible","true");
+            d2.setAttribute("visible","true");
+            d3.setAttribute("visible","true");
+            
+        })
+        
+        
+           d1.addEventListener("click",function(){
+                doora.setAttribute("src","#door1");
+                d1.setAttribute("visible","false");
+            })
+            d2.addEventListener("click",function(){
+                doora.setAttribute("src","#door2");
+                 d2.setAttribute("visible","false");
+            })
+            d3.addEventListener("click",function(){
+                doora.setAttribute("src","#door3");
+                 d3.setAttribute("visible","false");
+            })
+         
+        
+          ww1.addEventListener("mouseenter", function(){
+            ww1.setAttribute("src","#letsh");
+        })
+          ww1.addEventListener("mouseleave", function(){
+            ww1.setAttribute("src","#windb");
+        })
+        
+        ww1.addEventListener("click", function(){
+            windowa.setAttribute("visible","true");
+            windowb.setAttribute("visible","true");
+            ww1.setAttribute("visible","false");
+        })
+        
+        
+          bck.addEventListener("mouseenter",function(){
+            bck.setAttribute("src","#letsh");
+        })
+        bck.addEventListener("mouseleave",function(){
+            bck.setAttribute("src","#homeb");
+        })
+        
+    </script>
+    
+    </body>
+</html>
